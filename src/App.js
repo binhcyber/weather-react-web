@@ -4,11 +4,10 @@ function App() {
   const [search, setSearch] = useState("Ho Chi Minh");
   const [classDegree, setClassDegree] = useState("weather");
   const [customBackground, setCustomBackground] = useState("bgWeather");
-
   console.log(search);
   const [data, setData] = useState(null);
   useEffect(() => {
-    let geoApi = `http://api.openweathermap.org/geo/1.0/direct?q=${search}&limit=5&appid=950e030c8b60c7670445859d6c9d8f84`;
+    let geoApi = `https://api.openweathermap.org/geo/1.0/direct?q=${search}&limit=5&appid=950e030c8b60c7670445859d6c9d8f84`;
     fetch(geoApi)
       .then((res) => res.json())
       .then((res) => {
