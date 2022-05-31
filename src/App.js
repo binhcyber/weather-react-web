@@ -4,7 +4,6 @@ function App() {
   const [search, setSearch] = useState("Ho Chi Minh");
   const [classDegree, setClassDegree] = useState("weather");
   const [customBackground, setCustomBackground] = useState("bgWeather");
-  console.log(search);
   const [data, setData] = useState(null);
   useEffect(() => {
     let geoApi = `https://api.openweathermap.org/geo/1.0/direct?q=${search}&limit=5&appid=950e030c8b60c7670445859d6c9d8f84`;
@@ -15,14 +14,13 @@ function App() {
           lat: res[0].lat,
           lon: res[0].lon,
         };
-        console.log(lat, lon);
         getLocation(lat, lon);
       });
   }, [search]);
   const getLocation = async (lat, lon) => {
     let locationApi = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=950e030c8b60c7670445859d6c9d8f84`;
     let dataLocation = await fetch(locationApi).then((res) => res.json());
-    console.log(setData(dataLocation));
+    setData(dataLocation);
     const getDegree = Math.floor(data.main.temp - 273.15);
     if (getDegree <= 20 && getDegree > 10) {
       setClassDegree("cool");
