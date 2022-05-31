@@ -1,0 +1,275 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  
+}
+.bgWeather{
+  font-size: 62.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.05),
+      rgba(0, 0, 0, 0.07)
+    ),
+    url(./img/kyle-petzer-3FjR_2bUXFc-unsplash.jpg) no-repeat center/cover;
+
+  height: 100vh;
+  width: 100%;
+}
+.hotBgWeather{
+  font-size: 62.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.05),
+      rgba(0, 0, 0, 0.07)
+    ),
+    url(./img/nathan-lindahl-1j18807_ul0-unsplash.jpg) no-repeat center/cover;
+
+  height: 100vh;
+  width: 100%;
+}
+.coolBgWeather{
+  font-size: 62.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.05),
+      rgba(0, 0, 0, 0.07)
+    ),
+    url(./img/tony-pham-6_ufQUUbX7E-unsplash.jpg) no-repeat center/cover;
+
+  height: 100vh;
+  width: 100%;
+}
+.coldBgWeather{
+  font-size: 62.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.05),
+      rgba(0, 0, 0, 0.07)
+    ),
+    url(./img/boxed-water-is-better-gseALihVvQA-unsplash.jpg) no-repeat center/cover;
+
+  height: 100vh;
+  width: 100%;
+}
+.warmBgWeather{
+  font-size: 62.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.05),
+      rgba(0, 0, 0, 0.07)
+    ),
+    url(./img/kyle-petzer-3FjR_2bUXFc-unsplash.jpg) no-repeat center/cover;
+
+  height: 100vh;
+  width: 100%;
+}
+.weather {
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.05),
+      rgba(0, 0, 0, 0.07)
+    ),
+    url(./img/kyle-petzer-3FjR_2bUXFc-unsplash.jpg) no-repeat center/cover;
+  padding: 20px;
+  border-radius: 10px;
+}
+.cool {
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.05),
+      rgba(0, 0, 0, 0.07)
+    ),
+    url(./img/tony-pham-6_ufQUUbX7E-unsplash.jpg) no-repeat center/cover;
+    padding: 20px;
+  border-radius: 10px;
+}
+
+/* .cool.weather {
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.05),
+      rgba(0, 0, 0, 0.07)
+    ),
+    url(./img/tony-pham-6_ufQUUbX7E-unsplash.jpg) no-repeat center/cover;
+} */
+.hot {
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.05),
+      rgba(0, 0, 0, 0.07)
+    ),
+    url(./img/nathan-lindahl-1j18807_ul0-unsplash.jpg) no-repeat center/cover;
+    padding: 20px;
+  border-radius: 10px;
+}
+
+/* .hot.weather {
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.05),
+      rgba(0, 0, 0, 0.07)
+    ),
+    url(./img/nathan-lindahl-1j18807_ul0-unsplash.jpg) no-repeat center/cover;
+} */
+.cold {
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.05),
+      rgba(0, 0, 0, 0.07)
+    ),
+    url(./img/boxed-water-is-better-gseALihVvQA-unsplash.jpg) no-repeat
+      center/cover;
+      padding: 20px;
+  border-radius: 10px;
+}
+/* .cold.weather {
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.05),
+      rgba(0, 0, 0, 0.07)
+    ),
+    url(./img/boxed-water-is-better-gseALihVvQA-unsplash.jpg) no-repeat
+      center/cover;
+} */
+.warm {
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.05),
+      rgba(0, 0, 0, 0.07)
+    ),
+    url(./img/kyle-petzer-3FjR_2bUXFc-unsplash.jpg) no-repeat center/cover;
+    padding: 20px;
+  border-radius: 10px;
+}
+
+.weather__content {
+  margin: 0 auto;
+}
+
+.search {
+  padding-left: 20px;
+  font-size: 20px;
+  width: 300px;
+  height: 40px;
+  outline: none;
+  border: none;
+  border-radius: 0 15px 0 15px;
+  background: rgba(253, 253, 253, 0.3);
+  transition: 0.3s;
+  box-shadow: 4px 4px rgba(0, 0, 0, 0.3);
+}
+.search:focus {
+  border-radius: 15px 0 15px 0;
+  background-color: white;
+}
+.weather__info {
+  transition: 0.4s linear;
+  /* visibility: hidden; */
+}
+.hidden {
+  visibility: hidden;
+  opacity: 0.5;
+}
+.countryside {
+  text-align: center;
+  margin-top: 20px;
+}
+.country,
+span {
+  color: white;
+  font-size: 30px;
+  text-shadow: 4px 4px rgba(0, 0, 0, 0.3);
+}
+.capital {
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 50px;
+  text-shadow: 4px 4px rgba(0, 0, 0, 0.3);
+}
+.date {
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  margin: 20px 0;
+}
+.temparature {
+  height: 120px;
+  width: 200px;
+  background-color: rgba(255, 253, 255, 0.3);
+  border-radius: 10px;
+  box-shadow: 4px 4px rgba(0, 0, 0, 0.3);
+  margin: 0 auto;
+  position: relative;
+}
+
+.temparature {
+  display: flex;
+  top: 10px;
+  font-size: 30px;
+  color: white;
+  justify-content: space-around;
+  align-items: center;
+}
+.temparature sup {
+  font-size: 60px;
+  position: absolute;
+  top: 10px;
+  left: 55%;
+}
+.c {
+  font-size: 80px;
+}
+
+.degree {
+  font-size: 80px;
+  color: white;
+  text-align: center;
+  text-shadow: 4px 4px rgba(0, 0, 0, 0.5);
+}
+.sky {
+  font-size: 40px;
+  color: white;
+  text-align: center;
+  margin: 20px 0;
+}
+.desciption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.more__desc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.more__desc i,
+p {
+  color: white;
+  font-size: 18px;
+  margin: 10px 0;
+}
+.hidden {
+  visibility: hidden;
+  opacity: 0.5;
+}
